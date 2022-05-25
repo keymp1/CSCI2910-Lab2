@@ -94,7 +94,7 @@ static void MultiplicationTable()
         Console.WriteLine($"{num} * {i} = {num * i}");
     }
 
-    Thread.Sleep(TimeSpan.FromSeconds(3));
+    Thread.Sleep(TimeSpan.FromSeconds(7));
 
 }
 
