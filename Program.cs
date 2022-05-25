@@ -42,11 +42,15 @@ static void MenuChoice(int option)
     {
         case 1:
             Addition();
+            Console.Clear();
             break;
         case 2:
             MultiplicationTable();
+            Console.Clear();
             break;
-        case 3: Console.WriteLine();
+        case 3:
+            ByteSize();
+            Console.Clear();
             break;
         case 4: Console.WriteLine();
             break;
@@ -96,5 +100,3 @@ static void MultiplicationTable()
     Thread.Sleep(TimeSpan.FromSeconds(3));
 
 }
-
-
