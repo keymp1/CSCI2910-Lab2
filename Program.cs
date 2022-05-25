@@ -52,9 +52,12 @@ static void MenuChoice(int option)
             ByteSize();
             Console.Clear();
             break;
-        case 4: Console.WriteLine();
+        case 4:
+            Calculator();
+            Console.Clear();
             break;
-        case 0: Console.WriteLine();
+        case 0:
+            Console.Write("Thank you for using my program!");
             break;
         default: Console.WriteLine("Invalid Menu Choice. Please Enter Number Option");
             break;
@@ -118,6 +121,53 @@ static void ByteSize()
     Console.WriteLine($"double       {sizeof(double)}                  {double.MinValue}                {double.MaxValue}");
     Console.WriteLine($"decimal      {sizeof(decimal)}                 {decimal.MinValue}               {decimal.MaxValue}");
     Console.WriteLine("-------------------------------------------------------------------------------------------------------------\n");
+
+    Thread.Sleep(TimeSpan.FromSeconds(3));
+}
+
+// Question 4 Method
+static void Calculator()
+{
+    string input = "";
+    do
+    {
+        Console.WriteLine("Please enter your first operand.");
+        double num1 = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("Enter your Operator (+, -, *, /, %)");
+        string op = Console.ReadLine();
+        Console.WriteLine("Please enter your second operand.");
+        double num2 = Convert.ToDouble(Console.ReadLine());
+
+        if(op == "+")
+        {
+            Console.WriteLine($"{num1} + {num2} = {num1 + num2}");
+        }
+        else if(op == "-")
+        {
+            Console.WriteLine($"{num1} - {num2} = {num1 - num2}");
+        }
+        else if (op == "*")
+        {
+            Console.WriteLine($"{num1} * {num2} = {num1 * num2}");
+        }
+        else if (op == "/")
+        {
+            Console.WriteLine($"{num1} / {num2} = {num1 / num2}");
+        }
+        else if (op == "%")
+        {
+            Console.WriteLine($"{num1} % {num2} = {num1 % num2}");
+        }
+        else
+        {
+            Console.WriteLine("Invalid Operator");
+        }
+
+        Console.WriteLine("Type 'esc' to quit or 'continue' to do another operation");
+        input = Console.ReadLine();
+
+
+    } while (input != "esc");
 
     Thread.Sleep(TimeSpan.FromSeconds(3));
 }
