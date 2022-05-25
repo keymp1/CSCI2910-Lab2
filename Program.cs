@@ -77,21 +77,15 @@ static void Addition()
 // Question 2 Method
 static void MultiplicationTable()
 {
-    Console.WriteLine("Enter number to see it's multiplcation table to 12");
+    Console.WriteLine("Enter number to see it's multiplcation table");
     int num = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Enter the Maximum number for the multiplication table");
+    int max = Convert.ToInt32(Console.ReadLine());
 
-    Console.WriteLine($"{num} x 0 = {num * 0}");
-    Console.WriteLine($"{num} x 1 = {num * 1}");
-    Console.WriteLine($"{num} x 2 = {num * 2}");
-    Console.WriteLine($"{num} x 3 = {num * 3}");
-    Console.WriteLine($"{num} x 4 = {num * 4}");
-    Console.WriteLine($"{num} x 5 = {num * 5}");
-    Console.WriteLine($"{num} x 6 = {num * 6}");
-    Console.WriteLine($"{num} x 7 = {num * 7}");
-    Console.WriteLine($"{num} x 8 = {num * 8}");
-    Console.WriteLine($"{num} x 9 = {num * 9}");
-    Console.WriteLine($"{num} x 10 = {num * 10}");
-    Console.WriteLine($"{num} x 11 = {num * 11}");
+    for(int i = 0; i <= max; i++)
+    {
+        Console.WriteLine($"{num} * {i} = {num * i}");
+    }
 
     Thread.Sleep(TimeSpan.FromSeconds(3));
 
