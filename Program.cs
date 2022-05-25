@@ -42,11 +42,15 @@ static void MenuChoice(int option)
     {
         case 1:
             Addition();
+            Console.Clear();
             break;
         case 2:
             MultiplicationTable();
+            Console.Clear();
             break;
-        case 3: Console.WriteLine();
+        case 3:
+            ByteSize();
+            Console.Clear();
             break;
         case 4: Console.WriteLine();
             break;
@@ -95,4 +99,25 @@ static void MultiplicationTable()
 
     Thread.Sleep(TimeSpan.FromSeconds(3));
 
+}
+
+// Question 3 method
+static void ByteSize()
+{
+    Console.WriteLine("-------------------------------------------------------------------------------------------------------------\n");
+    Console.WriteLine("Type          Byte(s) of Memory                   Min                 Max");
+    Console.WriteLine($"sbyte        {sizeof(sbyte)}                   {sbyte.MinValue}                 {sbyte.MaxValue}");
+    Console.WriteLine($"byte         {sizeof(byte)}                    {byte.MinValue}                  {byte.MaxValue}");
+    Console.WriteLine($"short        {sizeof(short)}                   {short.MinValue}                 {short.MaxValue}");
+    Console.WriteLine($"ushort       {sizeof(ushort)}                  {ushort.MinValue}                {ushort.MaxValue}");
+    Console.WriteLine($"int          {sizeof(int)}                     {int.MinValue}                   {int.MaxValue}");
+    Console.WriteLine($"uint         {sizeof(uint)}                    {uint.MinValue}                  {uint.MaxValue}");
+    Console.WriteLine($"long         {sizeof(long)}                    {long.MinValue}                  {long.MaxValue}");
+    Console.WriteLine($"ulong        {sizeof(ulong)}                   {ulong.MinValue}                 {ulong.MaxValue}");
+    Console.WriteLine($"float        {sizeof(float)}                   {float.MinValue}                 {float.MaxValue}");
+    Console.WriteLine($"double       {sizeof(double)}                  {double.MinValue}                {double.MaxValue}");
+    Console.WriteLine($"decimal      {sizeof(decimal)}                 {decimal.MinValue}               {decimal.MaxValue}");
+    Console.WriteLine("-------------------------------------------------------------------------------------------------------------\n");
+
+    Thread.Sleep(TimeSpan.FromSeconds(3));
 }
