@@ -42,9 +42,9 @@ static void MenuChoice(int option)
     {
         case 1:
             Addition();
-            Console.Clear();
             break;
-        case 2: Console.WriteLine();
+        case 2:
+            MultiplicationTable();
             break;
         case 3: Console.WriteLine();
             break;
@@ -74,4 +74,25 @@ static void Addition()
 
 }
 
+// Question 2 Method
+static void MultiplicationTable()
+{
+    Console.WriteLine("Enter number to see it's multiplcation table to 12");
+    int num = Convert.ToInt32(Console.ReadLine());
 
+    Console.WriteLine($"{num} x 0 = {num * 0}");
+    Console.WriteLine($"{num} x 1 = {num * 1}");
+    Console.WriteLine($"{num} x 2 = {num * 2}");
+    Console.WriteLine($"{num} x 3 = {num * 3}");
+    Console.WriteLine($"{num} x 4 = {num * 4}");
+    Console.WriteLine($"{num} x 5 = {num * 5}");
+    Console.WriteLine($"{num} x 6 = {num * 6}");
+    Console.WriteLine($"{num} x 7 = {num * 7}");
+    Console.WriteLine($"{num} x 8 = {num * 8}");
+    Console.WriteLine($"{num} x 9 = {num * 9}");
+    Console.WriteLine($"{num} x 10 = {num * 10}");
+    Console.WriteLine($"{num} x 11 = {num * 11}");
+
+    Thread.Sleep(TimeSpan.FromSeconds(3));
+
+}
