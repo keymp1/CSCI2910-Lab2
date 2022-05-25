@@ -96,3 +96,5 @@ static void MultiplicationTable()
     Thread.Sleep(TimeSpan.FromSeconds(3));
 
 }
+
+
