@@ -103,6 +103,7 @@ static void MultiplicationTable()
     Thread.Sleep(TimeSpan.FromSeconds(3));
 
 }
+Question4
 
 // Question 3 method
 static void ByteSize()
@@ -171,3 +172,4 @@ static void Calculator()
 
     Thread.Sleep(TimeSpan.FromSeconds(3));
 }
+
